@@ -1,0 +1,1 @@
+# Plataforma de texto alternativo
