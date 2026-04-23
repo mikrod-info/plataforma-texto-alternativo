@@ -2,10 +2,15 @@ FROM node:24-alpine
 
 WORKDIR /app
 
+RUN addgroup -S app && adduser -S app -G app
+
 COPY package*.json ./
 RUN npm install
 
 COPY . .
+
+RUN mkdir -p _site && chown -R app:app /app
+USER app
 
 EXPOSE 8080
 

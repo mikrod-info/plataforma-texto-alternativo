@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+
+    <header>
+      <nav aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <h1>{{ title }}</h1>
+      {{ content | safe }}
+    </main>
+
+    <footer>
+      <p>Plataforma de textos alternativos accesibles</p>
+    </footer>
+
+</body>
+</html>

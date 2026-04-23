@@ -1,5 +1,5 @@
-export default function (eleventy) {
-    eleventy.addPassthroughCopy({
+export default function (eleventyConfig) {
+    eleventyConfig.addPassthroughCopy({
         "src/css": "css"
     });
 
