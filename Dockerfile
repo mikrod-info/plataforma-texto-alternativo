@@ -9,4 +9,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["npx", "eleventy", "--serve", "--port=8080"]
+CMD ["npx", "eleventy", "--serve"]
