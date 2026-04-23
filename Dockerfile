@@ -5,7 +5,7 @@ WORKDIR /app
 RUN addgroup -S app && adduser -S app -G app
 
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 COPY . .
 

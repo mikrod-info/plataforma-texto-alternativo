@@ -3,6 +3,10 @@ export default function (eleventyConfig) {
         "src/css": "css"
     });
 
+    eleventyConfig.addCollection("posts", function (collectionApi) {
+       return collectionApi.getFilteredByGlob("src/posts/**/*.md");
+    });
+
     return {
         dir: {
             input: "src",

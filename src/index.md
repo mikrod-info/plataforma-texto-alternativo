@@ -20,8 +20,3 @@ Podés acceder a cada cartel escaneando su código QR o navegando desde el lista
 Este proyecto es impulsado por la Dirección de Accesibilidad de la Facultad de Informática, UNLP. Y busca mejorar el acceso a materiales visuales mediante la generación y publicación de texto alternativo.
 
 El objetivo es que la información sea comprensible para todas las personas, independientemente de cómo accedan al contenido.
-## Acerca el proyecto
-
-Este proyecto es impulsado por la Dirección de Accesibilidad de la Facultad de Informática, UNLP. Y busca mejorar el acceso a materiales visuales mediante la generación y publicación de texto alternativo.
-
-El objetivo es que la información sea comprensible para todas las personas, independientemente de cómo accedan al contenido.
