@@ -10,6 +10,7 @@ export default function (eleventyConfig) {
   registerCollections(eleventyConfig);
 
   return {
+    pathPrefix: "/plataforma-texto-alternativo",
     dir: {
       input: "src",
       output: "_site",

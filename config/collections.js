@@ -20,8 +20,6 @@ class TreeNode {
       .map((node) => node.finalize())
       .sort((a, b) => a.label.localeCompare(b.label, "es"));
 
-    this.posts.sort((a, b) => a.data.title.localeCompare(b.data.title, "es"));
-
     this.totalPosts =
       this.posts.length + this.children.reduce((acc, child) => acc + child.totalPosts, 0);
 

@@ -2,7 +2,7 @@
     <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="/">
             <span class="logo" aria-hidden="true">[logo]</span>
-            <span>nav</span>
+            <span>Texto alternativo</span>
         </a>
 
         <button
@@ -20,13 +20,13 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Inicio</a>
+                    <a class="nav-link" href="{{ '/' | url }}">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/catalogo/">Catálogo</a>
+                    <a class="nav-link" href="{{ '/catalogo/' | url }}">Catálogo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/contacto/">Contacto</a>
+                    <a class="nav-link" href="{{ '/contacto/' | url }}">Contacto</a>
                 </li>
             </ul>
         </div>

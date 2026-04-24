@@ -14,7 +14,7 @@
             <ul class="list-group list-group-flush mb-2">
               {%- for post in node.posts -%}
                 <li class="list-group-item py-1 px-0 border-0">
-                  <a href="{{ post.url }}" class="link-body-emphasis link-underline-opacity-25 link-underline-opacity-75-hover">{{ post.data.title }}</a>
+                  <a href="{{ post.url | url }}" class="link-body-emphasis link-underline-opacity-25 link-underline-opacity-75-hover">{{ post.data.title }}</a>
                 </li>
               {%- endfor -%}
             </ul>
