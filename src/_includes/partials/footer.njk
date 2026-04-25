@@ -1,27 +1,33 @@
-<footer class="bg-light border-top mt-5" aria-labelledby="footer-title">
-    <div class="container py-4">
-        <h2 id="footer-title" class="visually-hidden">Información del sitio</h2>
+<footer aria-labelledby="footer-title" class="site-footer">
+    <div class="footer-inner">
+        <h2 id="footer-title">Información del sitio</h2>
 
-        <div class="row g-4">
-            <section class="col-12 col-md-6" aria-labelledby="footer-institucional">
-                <h3 id="footer-institucional" class="h6">Institucional</h3>
-                <p class="mb-3">
+        <div class="footer-columns">
+            <section aria-labelledby="footer-institucional" class="footer-brand">
+                <h3 id="footer-institucional">Institucional</h3>
+                <p>
                     Plataforma de textos alternativos para carteles educativos.
                 </p>
 
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <img src="{{ '/assets/images/logo.svg' | url }}" alt="Secretaría de Extensión" height="40">
+                <div class="footer-logos">
+                    <div>
+                        <img src="{{ '/assets/images/logo.svg' | url }}"
+                             class="footer-logo"
+                             alt="Secretaría de Extensión"
+                             height="40">
                     </div>
-                    <div class="col-auto">
-                        <img src="{{ '/assets/images/logo-facultad.png' | url }}" alt="Facultad de Informática UNLP" height="40">
+                    <div>
+                        <img src="{{ '/assets/images/logo-facultad.png' | url }}"
+                             class="footer-logo"
+                             alt="Facultad de Informática UNLP"
+                             height="40">
                     </div>
                 </div>
             </section>
 
-            <nav class="col-12 col-md-6" aria-labelledby="footer-enlaces">
-                <h3 id="footer-enlaces" class="h6">Enlaces útiles</h3>
-                <ul class="list-unstyled mb-0">
+            <nav aria-labelledby="footer-enlaces" class="footer-links">
+                <h3 id="footer-enlaces">Enlaces útiles</h3>
+                <ul>
                     <li><a href="{{ '/' | url }}">Inicio</a></li>
                     <li><a href="{{ '/catalogo/' | url }}">Catálogo</a></li>
                     <li><a href="{{ '/contacto/' | url }}">Contacto</a></li>

@@ -1,9 +1,9 @@
 services:
   eleventy:
     build: .
+    user: "${UID:-1000}:${GID:-1000}"
     ports:
       - "8080:8080"
     volumes:
       - .:/app
       - /app/node_modules
-      - /app/_site

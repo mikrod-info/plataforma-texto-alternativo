@@ -1,26 +1,33 @@
-{%- macro renderTree(nodes) -%}
-<ul class="list-group list-group-flush">
+{%- macro renderTree(nodes, level = 0, parentPath = "") -%}
+<ul class="catalog-tree{% if level > 0 %} catalog-tree--nested{% endif %}">
   {%- for node in nodes %}
-    <li class="list-group-item border-0 px-0">
-      <details open class="mb-2">
-        <summary class="d-flex justify-content-between align-items-center gap-2 py-1">
-          <span class="fw-semibold">
-            {{ node.index.data.title or node.label }}
+    {%- set nodeLabel = node.index.data.title or node.label -%}
+    {%- set nodePath = (parentPath and (parentPath ~ "/" ~ nodeLabel)) or nodeLabel -%}
+    <li class="catalog-node catalog-node--{{ node.level }}">
+      <details
+        class="catalog-details"
+        data-catalog-node
+        data-catalog-level="{{ node.level }}"
+        data-catalog-path="{{ nodePath | escape }}"
+      >
+        <summary class="catalog-summary">
+          <span class="catalog-label">
+            {{ nodeLabel }}
           </span>
-          <span class="badge text-bg-secondary rounded-pill">{{ node.totalPosts }}</span>
+          <span class="catalog-count" aria-label="{{ node.totalPosts }} publicaciones">{{ node.totalPosts }}</span>
         </summary>
-        <div class="ms-3 mt-2">
+        <div>
           {%- if node.posts.length -%}
-            <ul class="list-group list-group-flush mb-2">
+            <ul class="catalog-posts">
               {%- for post in node.posts -%}
-                <li class="list-group-item py-1 px-0 border-0">
-                  <a href="{{ post.url | url }}" class="link-body-emphasis link-underline-opacity-25 link-underline-opacity-75-hover">{{ post.data.title }}</a>
+                <li>
+                  <a href="{{ post.url | url }}">{{ post.data.title }}</a>
                 </li>
               {%- endfor -%}
             </ul>
           {%- endif -%}
           {%- if node.children.length -%}
-            {{ renderTree(node.children) }}
+            {{ renderTree(node.children, level + 1, nodePath) }}
           {%- endif -%}
         </div>
       </details>

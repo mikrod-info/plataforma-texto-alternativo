@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: "Inicio"
+title: "Plataforma de texto alternativo"
 ---
 
 ## Bienvenida
