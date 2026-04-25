@@ -1,3 +1,15 @@
 <header>
     {%- include "partials/nav.njk" -%}
+    <label for="theme-toggle" class="theme-switch">
+        <input id="theme-toggle"
+               type="checkbox"
+               role="switch"
+               aria-label="Cambiar tema claro/oscuro"
+        />
+        <span>🌜</span>
+    </label>
+    <span id="theme-status"
+          class="visually-hidden">
+        Tema claro activado
+    </span>
 </header>

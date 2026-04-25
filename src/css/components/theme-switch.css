@@ -1,0 +1,10 @@
+.theme-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.theme-switch input {
+    cursor: pointer;
+}
